@@ -1,7 +1,7 @@
 # Maintainer: Daniel Hillenbrand <codeworkx@bbqlinux.org>
 
 pkgname=android-udev-rules
-pkgver=1.0.2
+pkgver=1.0.3
 pkgrel=1
 pkgdesc="Android udev rules"
 arch=('any')

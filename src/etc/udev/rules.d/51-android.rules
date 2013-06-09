@@ -60,6 +60,9 @@ ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee1", SYMLINK+="android_fastboot"
 ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e21"
 ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e22", SYMLINK+="android_adb"
 ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e20", SYMLINK+="android_fastboot"
+#		Galaxy Nexus
+ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e30", SYMLINK+="android_adb"
+ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e30", SYMLINK+="android_fastboot" 
 #		Nexus One
 ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e11"
 ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e12", SYMLINK+="android_adb"
@@ -119,7 +122,8 @@ ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0c96", SYMLINK+="android_adb"
 ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0fff", SYMLINK+="android_fastboot"
 #		One (m7)
 ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0c93"
-ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0f87", SYMLINK+="android_adb"
+ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0f87"
+ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0f86", SYMLINK+="android_adb"
 ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0ff0", SYMLINK+="android_fastboot"
 #		Slide
 ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0ff9"
@@ -205,6 +209,12 @@ ATTR{idVendor}=="2080", ENV{adb_user}="yes"
 
 #	Nvidia
 ATTR{idVendor}=="0955", ENV{adb_user}="yes"
+
+#	Oppo
+ATTR{idVendor}=="22d9", ENV{adb_user}="yes"
+#		Find 5
+ATTR{idVendor}=="22d9", ATTR{idProduct}=="2767", SYMLINK+="android_adb"
+ATTR{idVendor}=="22d9", ATTR{idProduct}=="2764", SYMLINK+="libmtp-%k", ENV{ID_MTP_DEVICE}="1", ENV{ID_MEDIA_PLAYER}="1"
 
 #	OTGV
 ATTR{idVendor}=="2257", ENV{adb_user}="yes"
