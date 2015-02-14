@@ -3,14 +3,19 @@
 # Contributor: marlock
 
 pkgname=android-udev-rules
-pkgver=1.0.4
+pkgver=1.0.6
 pkgrel=1
 pkgdesc="Android udev rules"
 arch=('any')
 url="https://github.com/bbqlinux/android-udev-rules"
 license=('GPL')
+depends=('systemd' 'libmtp')
 
 package() {
-    cd "$pkgdir"
-    install -Dm755 "$srcdir/etc/udev/rules.d/51-android.rules" etc/udev/rules.d/51-android.rules
+    #cd "$pkgdir"
+
+    mkdir -p $pkgdir/usr/lib/udev/rules.d/
+
+    cp $srcdir/usr/lib/udev/rules.d/51-android.rules $pkgdir/usr/lib/udev/rules.d/51-android.rules
+    chmod a+r $pkgdir/usr/lib/udev/rules.d/51-android.rules
 }
