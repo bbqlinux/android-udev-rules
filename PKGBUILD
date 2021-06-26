@@ -12,8 +12,7 @@ license=('GPL')
 depends=('systemd' 'libmtp')
 
 package() {
-    mkdir -p $pkgdir/usr/lib/udev/rules.d/
 
-    cp $srcdir/usr/lib/udev/rules.d/51-android.rules $pkgdir/usr/lib/udev/rules.d/51-android.rules
-    chmod 644 $pkgdir/usr/lib/udev/rules.d/51-android.rules
+    install -Dm 644 "$srcdir/usr/lib/udev/rules.d/51-android.rules" "$pkgdir/usr/lib/udev/rules.d/51-android.rules"
+
 }
